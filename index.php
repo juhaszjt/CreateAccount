@@ -16,7 +16,7 @@ $accountObject->subscribeObserver($mailSender);
 
 $accountObject->create('Pista', 'Kiss Pista', 'pista@google.com');
 
-$accountObject->unSubscribeObserver($mailSender);
+//$accountObject->unSubscribeObserver($mailSender);
 
 $accountObject->create('Eva', 'Nagy Eva', 'eva@yahoo.com');
 
