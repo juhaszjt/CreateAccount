@@ -1,10 +1,9 @@
 <?php
 
-include_once 'AccountStrategyInterface.php';
+include_once 'AccountStrategyAbstract.php';
 include_once 'AccountFactory.php';
-include_once 'MailSender.php';
 
-class MemberStrategy implements AccountStrategyInterface
+class MemberStrategy extends AccountStrategyAbstract
 {
 	public function create($userName, $name, $email)
 	{
@@ -17,21 +16,8 @@ class MemberStrategy implements AccountStrategyInterface
 		$accountObject->create($userName, $name, $email);
 	}
 
-	public function subscribeObservers(SubjectAbstract $accountObject)
-	{
-		$this->subscribeTaskObservers($accountObject);
-		$this->subscribeMailObservers($accountObject);
-	}
-
 	public function subscribeTaskObservers(SubjectAbstract $accountObject)
 	{
 		// We don't want member task.
-	}
-
-	public function subscribeMailObservers(SubjectAbstract $accountObject)
-	{
-		$mailSender = new MailSender();
-
-		$accountObject->subscribeObserver($mailSender);
 	}
 }
