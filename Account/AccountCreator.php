@@ -1,8 +1,8 @@
 <?php
 
-include_once 'PerformerStrategy.php';
-include_once 'StudioStrategy.php';
-include_once 'MemberStrategy.php';
+include_once 'Strategy/PerformerStrategy.php';
+include_once 'Strategy/StudioStrategy.php';
+include_once 'Strategy/MemberStrategy.php';
 
 class AccountCreator
 {

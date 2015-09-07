@@ -1,8 +1,8 @@
 <?php
 
-include_once 'Performer.php';
-include_once 'Studio.php';
-include_once 'Member.php';
+include_once 'Account/Performer.php';
+include_once 'Account/Studio.php';
+include_once 'Account/Member.php';
 
 class AccountFactory
 {

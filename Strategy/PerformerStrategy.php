@@ -1,8 +1,8 @@
 <?php
 
 include_once 'AccountStrategyAbstract.php';
-include_once 'AccountFactory.php';
-include_once 'MailSender.php';
+include_once 'Factory/AccountFactory.php';
+include_once 'BO/MailSender.php';
 
 class PerformerStrategy extends AccountStrategyAbstract
 {

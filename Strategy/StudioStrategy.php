@@ -1,23 +1,18 @@
 <?php
 
 include_once 'AccountStrategyAbstract.php';
-include_once 'AccountFactory.php';
+include_once 'Factory/AccountFactory.php';
 
-class MemberStrategy extends AccountStrategyAbstract
+class StudioStrategy extends AccountStrategyAbstract
 {
 	public function create($userName, $name, $email)
 	{
 		$accountFactory = new AccountFactory();
 
-		$accountObject = $accountFactory->make('Member');
+		$accountObject = $accountFactory->make('Studio');
 
 		$this->subscribeObservers($accountObject);
 
 		$accountObject->create($userName, $name, $email);
-	}
-
-	public function subscribeTaskObservers(SubjectAbstract $accountObject)
-	{
-		// We don't want member task.
 	}
 }

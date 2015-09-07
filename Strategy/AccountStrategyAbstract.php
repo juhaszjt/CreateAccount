@@ -1,8 +1,8 @@
 <?php
 
 include_once 'AccountStrategyInterface.php';
-include_once 'TaskMaker.php';
-include_once 'MailSender.php';
+include_once 'BO/TaskMaker.php';
+include_once 'BO/MailSender.php';
 
 abstract class AccountStrategyAbstract implements AccountStrategyInterface
 {

@@ -1,6 +1,6 @@
 <?php
 
-include_once 'AccountCreator.php';
+include_once 'Account/AccountCreator.php';
 
 $accountCreator = new AccountCreator();
 

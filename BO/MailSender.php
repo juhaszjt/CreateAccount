@@ -1,13 +1,13 @@
 <?php
 
-include_once 'ObserverInterface.php';
+include_once 'Observer/ObserverInterface.php';
 
-class TaskMaker implements ObserverInterface
+class MailSender implements ObserverInterface
 {
     public function doNotify($type, $userName, $name, $email)
     {
         // ....
-        print $type . ' task is created!<br />';
+        print 'Mail is sent to ' . $type . '!<br />';
         print 'User name: ' . $userName . '<br />';
         print 'Full name: ' . $name . '<br />';
         print 'Email Address: ' . $email . '<br />';
